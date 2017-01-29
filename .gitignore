@@ -1,0 +1,3 @@
+.htaccess
+/src/vendor
+node_modules

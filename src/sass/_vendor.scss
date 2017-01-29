@@ -1,0 +1,7 @@
+@import '../vendor/bootstrap/scss/bootstrap.scss';
+
+//Font Awesome
+$fa-font-path:        "/assets/fonts/FontAwesome/";
+@import '../vendor/components-font-awesome/scss/font-awesome.scss';
+
+@import "../vendor/include-media/dist/include-media";
