@@ -2,6 +2,5 @@
 wp
 **/src/vendor
 node_modules
-**/app/themes/blankslate
-**/app/themes/html5blank-stable
-**/app/themes/twentyseventeen
+app/themes/*
+!app/themes/troubadourhostel
