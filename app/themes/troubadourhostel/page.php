@@ -10,32 +10,54 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Troubadour_Hostel
  * @since 1.0
  * @version 1.0
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main role="main">
+		<!-- section -->
+		<section>
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<h1><?php the_title(); ?></h1>
 
-				get_template_part( 'template-parts/page/content', 'page' );
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			endwhile; // End of the loop.
-			?>
+				<?php the_content(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-<?php get_footer();
+				<br class="clear">
+
+				<?php edit_post_link(); ?>
+
+			</article>
+			<!-- /article -->
+
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
+
+				<h2><?php _e( 'Sorry, nothing to display.', 'troubadourhostel' ); ?></h2>
+
+			</article>
+			<!-- /article -->
+
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

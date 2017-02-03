@@ -7,47 +7,60 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Troubadour_Hostel
  * @since 1.0
  * @version 1.0
  */
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+?>
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-<?php wp_head(); ?>
-</head>
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-	<header id="masthead" class="site-header" role="banner">
+		<?php wp_head(); ?>
+		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '<?php echo get_template_directory_uri(); ?>',
+            tests: {}
+        });
+        </script>
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+	</head>
+	<body <?php body_class(); ?>>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+		<!-- wrapper -->
+		<div class="wrapper">
 
-	</header><!-- #masthead -->
+			<!-- header -->
+			<header class="header clear" role="banner">
 
-	<?php
-	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
-		echo '<div class="single-featured-image-header">';
-		the_post_thumbnail( 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</a>
+					</div>
+					<!-- /logo -->
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+					<!-- nav -->
+					<nav class="nav" role="navigation">
+						
+					</nav>
+					<!-- /nav -->
+
+			</header>
+			<!-- /header -->
+
