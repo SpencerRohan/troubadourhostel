@@ -1,2 +1,4 @@
 .htaccess
 wp
+**/src/vendor
+node_modules
