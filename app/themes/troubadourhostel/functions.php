@@ -21,3 +21,4 @@ try {
 
     exit('<p>An error occured while loading this page. Please try again later.</p>');
 }
+

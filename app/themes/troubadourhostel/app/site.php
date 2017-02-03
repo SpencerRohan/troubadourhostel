@@ -7,6 +7,14 @@ class Site
 	{
 		$this->add_admin_actions();
 		$this->add_actions();
+		$this->setup_theme();
+
+	}
+
+	private function setup_theme(){
+		load_theme_textdomain( 'troubadourhostel' );
+		add_image_size( 'troubadourhostel-featured-image', 2000, 1200, true );
+		add_image_size( 'troubadourhostel-thumbnail-avatar', 100, 100, true );
 
 	}
 
@@ -94,6 +102,22 @@ class Site
 	public function custom_theme_support()
 	{
 		add_theme_support('title-tag');
+		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'html5', array(
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		));
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'audio',
+		));
 	}
 
 	public function add_meta_tags()

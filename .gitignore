@@ -2,3 +2,5 @@
 wp
 **/src/vendor
 node_modules
+**/app/themes/html5blank-stable
+**/app/themes/blankslate
