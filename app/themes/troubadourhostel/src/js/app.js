@@ -1,4 +1,4 @@
 $( document ).ready(function() {
-    console.log("HERE")
+    console.log("HERE");
 
 });
