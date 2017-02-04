@@ -18,65 +18,29 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
-	return;
-}
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments">
+	<?php if (post_password_required()) : ?>
+	<p><?php _e( 'Post is password protected. Enter the password to view any comments.', 'troubdourhostel' ); ?></p>
+</div>
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				$comments_number = get_comments_number();
-				if ( '1' === $comments_number ) {
-					/* translators: %s: post title */
-					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'troubadourhostel' ), get_the_title() );
-				} else {
-					printf(
-						/* translators: 1: number of comments, 2: post title */
-						_nx(
-							'%1$s Reply to &ldquo;%2$s&rdquo;',
-							'%1$s Replies to &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title',
-							'troubadourhostel'
-						),
-						number_format_i18n( $comments_number ),
-						get_the_title()
-					);
-				}
-			?>
-		</h2>
+	<?php return; endif; ?>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'avatar_size' => 100,
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'reply_text'  => troubadourhostel_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'troubadourhostel' ),
-				) );
-			?>
-		</ol>
+<?php if (have_comments()) : ?>
 
-		<?php the_comments_pagination( array(
-			'prev_text' => troubadourhostel_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'troubadourhostel' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'troubadourhostel' ) . '</span>' . troubadourhostel_get_svg( array( 'icon' => 'arrow-right' ) ),
-		) );
+	<h2><?php comments_number(); ?></h2>
 
-	endif; // Check for have_comments().
+	<ul>
+		<?php wp_list_comments('type=comment'); // Custom callback in functions.php ?>
+	</ul>
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'troubadourhostel' ); ?></p>
-	<?php
-	endif;
+	<p><?php _e( 'Comments are closed here.', 'troubadourhostel' ); ?></p>
 
-	comment_form();
-	?>
+<?php endif; ?>
 
-</div><!-- #comments -->
+<?php comment_form(); ?>
+
+</div>

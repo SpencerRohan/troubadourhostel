@@ -51,17 +51,17 @@ class Site
 
 	public function login_enqueue_styles()
 	{
-		wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
+		// wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
 	}
 
 	public function admin_enqueue_styles()
 	{
-		wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
+		// wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
 	}
 
 	public function site_enqueue_styles() 
 	{
-		wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
+		// wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
 		wp_enqueue_style('app-css', get_template_directory_uri () . '/assets/css/app.css');
 	}
 
@@ -87,7 +87,6 @@ class Site
 			register_nav_menu($location, __( $description , $location ) );
 		}
 	}
-
 
 	public function register_sidebars() 
 	{

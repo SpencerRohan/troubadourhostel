@@ -9,7 +9,8 @@
  * @since 1.0
  * @version 1.0
  */
-
+?>
+SINGLE!!
 <?php get_header(); ?>
 
 	<main role="main">
