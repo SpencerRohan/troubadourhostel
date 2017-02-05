@@ -1,3 +1,19 @@
 html, body { 
 	background-color: $brand-c-backing; 
 }
+
+h1.brand-troubadour {
+	font-family: $brand-f-primary;
+  font-size: 8rem;
+  margin-bottom: 0;
+  -webkit-text-stroke-color: #ffdc31;
+  text-shadow: -1px -1px 0 #ffdc31, 1px -1px 0 #ffdc31, -1px 1px 0 #ffdc31, 1px 1px 0 #ffdc31;-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h1.brand-hostel {
+    margin-top: -32px;
+    margin-left: 300px;
+    color: white;
+    -webkit-text-stroke-color: #ffdc31;
+    text-shadow: -1px -1px 0 #0c0c0c, 1px -1px 0 #060606, -1px 1px 0 #0e0e0e, 1px 1px 0 #080808;
+}

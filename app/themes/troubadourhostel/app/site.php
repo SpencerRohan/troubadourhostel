@@ -5,9 +5,10 @@ class Site
 
 	public function __construct() 
 	{
-		$this->add_admin_actions();
+		$this->setup_filters();
 		$this->add_actions();
 		$this->setup_theme();
+		$this->add_admin_actions();
 
 	}
 
@@ -17,6 +18,18 @@ class Site
 		add_image_size( 'troubadourhostel-thumbnail-avatar', 100, 100, true );
 
 	}
+
+	private function setup_filters(){
+		add_filter( 'script_loader_src', array($this, 'wpse47206_src'));
+		add_filter( 'style_loader_src', array($this, 'wpse47206_src'));
+	}
+
+
+public function wpse47206_src( $url )
+{
+    // if( is_admin() ) return $url;
+    return str_replace( site_url(), '', $url );
+}
 
 	private function add_admin_actions()
 	{
@@ -38,15 +51,20 @@ class Site
 	private function add_actions()
 	{
 		$actions = array(
-      'wp_head'                 => 'site_enqueue_styles',
+			'init'										=> 'site_register_styles',
       'login_enqueue_scripts'   => 'login_enqueue_styles',
-      'wp_enqueue_scripts'      => 'site_enqueue_scripts'
+      'wp_enqueue_scripts'      => 'site_enqueue_scripts_and_styles'
 		);
 
 		foreach ($actions as $action=>$function) 
 		{
 			add_action( $action , array( $this, $function ));
 		}
+	}
+
+	public function site_register_styles(){
+		wp_register_style('app-css', get_template_directory_uri () . '/assets/css/app.css');
+
 	}
 
 	public function login_enqueue_styles()
@@ -59,20 +77,16 @@ class Site
 		// wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
 	}
 
-	public function site_enqueue_styles() 
+	public function site_enqueue_scripts_and_styles() 
 	{
 		// wp_enqueue_style('logo-css', get_template_directory_uri () . '/assets/css/admin_logo.css');
-		wp_enqueue_style('app-css', get_template_directory_uri () . '/assets/css/app.css');
+		wp_enqueue_style( 'app-css');
+		wp_enqueue_script('app-js', get_template_directory_uri () . '/assets/js/app.js', array(), '', true);
 	}
 
 	public function admin_enqueue_scripts()
 	{
 
-	}
-
-	public function site_enqueue_scripts()
-	{
-		wp_enqueue_script('app-js', get_template_directory_uri () . '/assets/js/app.js', array(), '', true);
 	}
 
 	public function register_menus()

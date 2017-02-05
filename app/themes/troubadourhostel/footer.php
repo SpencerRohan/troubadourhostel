@@ -23,10 +23,10 @@
 				</p>
 				<!-- /copyright -->
 
+				<?php wp_footer(); ?>
 			</footer>
 			<!-- /footer -->
 
-		<?php wp_footer(); ?>
 
 		<!-- analytics
 		<script>
