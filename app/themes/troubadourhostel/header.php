@@ -39,12 +39,22 @@
 							
 						</nav>
 						<!-- /nav -->
-						<h1 class="brand-troubadour">troubadour</h1>
-						<h1 class="brand-hostel">HOSTEL</h1>
-						<h4>TAG LINE HERE</h4>
 
+						<?php if( is_home() ): ?>
+							<div class="brand-title">
+								<div class="title">
+									<h1 class="brand-troubadour">troubadour</h1>
+									<h1 class="brand-hostel">HOSTEL</h1>
+								</div>
+								<div class="logo">
+									<img src="https://puu.sh/tPIUU/34834f5c02.png" alt="window" >
+								</div>
+								<div class="slogan">
+								<h4>CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
+								</div>
+							</div>
+						<?php endif; ?>
 						
 
 				</header>
 				<!-- /header -->
-

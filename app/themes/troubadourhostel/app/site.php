@@ -5,7 +5,7 @@ class Site
 
 	public function __construct() 
 	{
-		$this->setup_filters();
+		// $this->setup_filters();
 		$this->add_actions();
 		$this->setup_theme();
 		$this->add_admin_actions();
