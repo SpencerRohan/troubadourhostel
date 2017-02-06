@@ -27,7 +27,8 @@ var gulp      = require('gulp'),
    		// materialize: 'src/vendor/Materialize',
       bootstrap: 'src/vendor/bootstrap',
       tether: 'src/vendor/tether',
-   		jquery: 'src/vendor/jquery'
+   		jquery: 'src/vendor/jquery',
+      parallax: 'src/vendor/parallax',
    	}
   },
   dest = { 
@@ -58,7 +59,7 @@ gulp.task('js', function() {
       src.vendor.tether+'/dist/js/tether.min.js',
       // src.vendor.materialize+'/dist/js/materialize.js',
       src.vendor.bootstrap+'/dist/js/bootstrap.min.js',
-      src.js.base+'/parallax.js',
+      src.vendor.parallax+'/parallax.js',
       src.js.base+'/app.js',
     ], 
     dest.js
