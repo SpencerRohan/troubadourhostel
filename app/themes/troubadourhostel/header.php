@@ -33,14 +33,16 @@
 	</head>
 	<body <?php body_class(); ?>>
 				<!-- header -->
-				<header class="header clear">
+				<header class="header clear <?php echo is_home() ? 'parallax-container' : ''; ?>">
 						<!-- nav -->
 						<nav class="nav" role="navigation">
-							
+							<?php wp_nav_menu( array( 'troubadourhostel' => 'primary' ) ); ?>
 						</nav>
 						<!-- /nav -->
 
 						<?php if( is_home() ): ?>
+							<div class="parallax"><img src="http://d2436y6oj07al2.cloudfront.net/assets/vbblog/2015/02/River.jpg"></div>
+
 							<div class="brand-title">
 								<div class="title">
 									<h1 class="brand-troubadour">troubadour</h1>
@@ -54,7 +56,5 @@
 								</div>
 							</div>
 						<?php endif; ?>
-						
-
 				</header>
 				<!-- /header -->

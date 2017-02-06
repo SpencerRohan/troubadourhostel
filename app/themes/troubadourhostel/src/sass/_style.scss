@@ -1,15 +1,14 @@
 .home header { 
-	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/68/5a/52/685a52208670ded7de194baffbad9abe.jpg);
+/*	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/68/5a/52/685a52208670ded7de194baffbad9abe.jpg);
 	background-image: url(http://www.chicagoeb5.com/wp-content/uploads/2013/11/chicago_skyline_hd_wallpaper-HD-bw.jpg);
 	background-image: url(https://puu.sh/tPZHj/76428d6640.png);
-	background-image: url(http://d2436y6oj07al2.cloudfront.net/assets/vbblog/2015/02/River.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-attachment: fixed;
+	background-image: url(http://d2436y6oj07al2.cloudfront.net/assets/vbblog/2015/02/River.jpg); */
 	background-color: $brand-c-backing;
 	height: 100vh;
-	position: relative;
+
+	.parallax img {
+		height: 140vh;
+	}
 
 	.brand-title {
 		padding-top: 20vh;
@@ -35,9 +34,6 @@
 			clear: both;
 			flex: 0 1 100%;
 			text-align: center;
-
-
-
 		}
 	}
 
