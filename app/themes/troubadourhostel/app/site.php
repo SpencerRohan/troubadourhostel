@@ -139,7 +139,7 @@ class Site
 
 	public function get_svg($filename)
 	{
-				get_template_part('assets/svg/'.$filename);
+		get_template_part('assets/svg/'.$filename);
 	}
 
 	public function add_meta_tags()
