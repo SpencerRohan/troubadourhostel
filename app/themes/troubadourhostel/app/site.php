@@ -9,7 +9,6 @@ class Site
 		$this->add_actions();
 		$this->setup_theme();
 		$this->add_admin_actions();
-
 	}
 
 	private function setup_theme(){
@@ -18,47 +17,52 @@ class Site
 		add_image_size( 'troubadourhostel-thumbnail-avatar', 100, 100, true );
 
 	}
-
 	private function setup_filters(){
 		add_filter( 'script_loader_src', array($this, 'wpse47206_src'));
 		add_filter( 'style_loader_src', array($this, 'wpse47206_src'));
 	}
 
 
-public function wpse47206_src( $url )
-{
-    // if( is_admin() ) return $url;
-    return str_replace( site_url(), '', $url );
-}
+	public function wpse47206_src( $url )
+	{
+	    // if( is_admin() ) return $url;
+	    return str_replace( site_url(), '', $url );
+	}
 
 	private function add_admin_actions()
 	{
 		$actions = array(
-      'widgets_init'            => 'register_sidebars',
-      'admin_enqueue_scripts'   => 'admin_enqueue_styles',
-      'admin_enqueue_scripts'   => 'admin_enqueue_scripts',
-      'after_setup_theme'       => 'register_menus',
-      'after_setup_theme'				=> 'custom_theme_support',
-      'wp_head'									=> 'add_meta_tags'
+      'widgets_init'            => array('register_sidebars'),
+      'admin_enqueue_scripts'   => array('admin_enqueue_styles', 'admin_enqueue_scripts'),
+      'after_setup_theme'       => array('register_menus'),
+      'after_setup_theme'				=> array('custom_theme_support'),
+      'wp_head'									=> array('add_meta_tags')
 		);
 
-		foreach ($actions as $action=>$function) 
+		foreach ($actions as $action=>$functions) 
 		{
-			add_action( $action , array( $this, $function ));
+			foreach ($functions as $function)
+			{
+				add_action( $action , array( $this, $function ));
+			}
 		}
 	}
 
 	private function add_actions()
 	{
 		$actions = array(
-			'init'										=> 'site_register_styles',
-      'login_enqueue_scripts'   => 'login_enqueue_styles',
-      'wp_enqueue_scripts'      => 'site_enqueue_scripts_and_styles'
+			'init'										=> array('site_register_styles'),
+			'get_svg'									=> array('get_svg'),
+      'login_enqueue_scripts'   => array('login_enqueue_styles'),
+      'wp_enqueue_scripts'      => array('site_enqueue_scripts_and_styles')
 		);
 
-		foreach ($actions as $action=>$function) 
+		foreach ($actions as $action=>$functions) 
 		{
-			add_action( $action , array( $this, $function ));
+			foreach ($functions as $function)
+			{
+				add_action( $action , array( $this, $function ));
+			}
 		}
 	}
 
@@ -131,6 +135,11 @@ public function wpse47206_src( $url )
 			'gallery',
 			'audio',
 		));
+	}
+
+	public function get_svg($filename)
+	{
+				get_template_part('assets/svg/'.$filename);
 	}
 
 	public function add_meta_tags()

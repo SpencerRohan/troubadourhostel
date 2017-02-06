@@ -24,7 +24,7 @@
 		
 		.logo {
 			display: inline-block;
-			img {
+			#tr-window {
 				width: 60px;
 				margin-left: 40px;
 			} 
@@ -37,4 +37,11 @@
 		}
 	}
 
+}
+
+
+#tr-window{
+	.window-glass{
+		fill: $brand-c-primary;
+	}
 }

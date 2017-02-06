@@ -49,7 +49,7 @@
 									<h1 class="brand-hostel">HOSTEL</h1>
 								</div>
 								<div class="logo">
-									<img src="https://puu.sh/tPIUU/34834f5c02.png" alt="window" >
+									<?php do_action('get_svg', 'tr_window'); ?>
 								</div>
 								<div class="slogan">
 								<h4>CHICAGO'S PREMIERE ARTIST HOSTEL</h4>

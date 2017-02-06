@@ -2,6 +2,11 @@
 $brand-c-primary: #FDCB15;
 $brand-c-backing: #FCF2D7;
 
+
+/* Overriding Bootstrap */
+	//Colors
+		$brand-primary: $brand-c-primary;
+
 /* FONTS */
 $brand-f-primary: "SignPainter";
 
