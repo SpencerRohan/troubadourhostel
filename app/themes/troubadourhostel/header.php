@@ -38,6 +38,8 @@
 						<nav class="nav" role="navigation">
 							<?php wp_nav_menu( array( 'troubadourhostel' => 'primary' ) ); ?>
 						</nav>
+
+
 						<!-- /nav -->
 
 						<?php if( is_home() ): ?>
@@ -52,9 +54,12 @@
 									<?php do_action('get_svg', 'tr_window'); ?>
 								</div>
 								<div class="slogan">
-								<h4 class="brand-slogan">CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
+									<h4 class="brand-slogan">CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
 								</div>
+								<a href ="#!" class="scroll-icon"></a>
 							</div>
+
 						<?php endif; ?>
+
 				</header>
 				<!-- /header -->

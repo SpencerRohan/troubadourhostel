@@ -34,6 +34,18 @@
 	}
 }
 
+a.scroll-icon {
+	font-family: 'icomoon';
+	font-color: black;
+	color: #ffdc31;
+	font-size: 45px;
+	position: absolute;
+	bottom: 40px;
+	text-shadow: -1px -1px 0 #060606, 1px -1px 0 #21211f, -1px 1px 0 #0c0c0a, 1px 1px 0 #272622;
+	-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	-webkit-text-stroke-color: #080807;
+}
+
 h1.brand-troubadour {
 	color: black;
 	font-family: $brand-f-signature;
