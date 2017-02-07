@@ -21,7 +21,6 @@ nav {
 
 @include media(">=md") {
 	nav {
-		height: 100%;
 		background-color: rgba(39,42,51,.3);
 		&:hover { background-color: rgba(39,42,51,1); }
 		ul {

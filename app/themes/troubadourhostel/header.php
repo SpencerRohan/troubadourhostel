@@ -52,7 +52,7 @@
 									<?php do_action('get_svg', 'tr_window'); ?>
 								</div>
 								<div class="slogan">
-								<h4>CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
+								<h4 class="brand-slogan">CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
 								</div>
 							</div>
 						<?php endif; ?>

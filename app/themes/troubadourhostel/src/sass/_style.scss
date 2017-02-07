@@ -16,22 +16,6 @@
 
 		.title {
 			text-align: center;
-			h1.brand-troubadour {
-				font-family: $brand-f-signature;
-				color: black;
-			  margin-bottom: 0;
-			  text-shadow: -1px -1px 0 #ffdc31, 1px -1px 0 #ffdc31, -1px 1px 0 #ffdc31, 1px 1px 0 #ffdc31;-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-			  -webkit-text-stroke-color: #ffdc31;
-			}
-
-			h1.brand-hostel {
-			  color: white;
-			  font-size: 1.4rem;
-    		margin-left: 65px;
-			  margin-top: -10px;
-			  text-shadow: -1px -1px 0 #0c0c0c, 1px -1px 0 #060606, -1px 1px 0 #0e0e0e, 1px 1px 0 #080808;
-			  -webkit-text-stroke-color: #ffdc31;
-			}
 		}
 		
 		.logo {
@@ -46,15 +30,34 @@
 			clear: both;
 			flex: 0 1 100%;
 			text-align: center;
-			h4 {
-				color: $brand-c-primary;
-				text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-	    	-webkit-text-stroke-color: black;
-			}
 		}
 	}
 }
 
+h1.brand-troubadour {
+	color: black;
+	font-family: $brand-f-signature;
+	font-size: 4rem;
+	margin-bottom: 0;
+	text-shadow: -1px -1px 0 #ffdc31, 1px -1px 0 #ffdc31, -1px 1px 0 #ffdc31, 1px 1px 0 #ffdc31;-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	-webkit-text-stroke-color: #ffdc31;
+}
+
+h1.brand-hostel {
+	color: white;
+	font-size: 2rem;
+	margin-left: 100px;
+	margin-top: -10px;
+	text-shadow: -1px -1px 0 #0c0c0c, 1px -1px 0 #060606, -1px 1px 0 #0e0e0e, 1px 1px 0 #080808;
+	-webkit-text-stroke-color: #ffdc31;
+}
+
+h4.brand-slogan{
+	color: $brand-c-primary;
+	font-size: 1rem;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	-webkit-text-stroke-color: black;
+}
 
 #tr-window{
 	.window-glass{
