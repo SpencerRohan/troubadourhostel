@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-
+ 
 <?php get_header(); ?>
 
 	<main role="main">
@@ -19,9 +19,9 @@
 
 			<h1><?php _e( 'Archives', 'troubadourhostel' ); ?></h1>
 
-			<?php get_template_part('loop'); ?>
+			<?php get_template_part('template-parts', 'loop'); ?>
 
-			<?php get_template_part('pagination'); ?>
+			<?php get_template_part('template-parts', 'pagination'); ?>
 
 		</section>
 		<!-- /section -->

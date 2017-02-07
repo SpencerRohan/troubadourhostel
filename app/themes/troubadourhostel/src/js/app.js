@@ -1,4 +1,5 @@
 $( document ).ready(function() {
-    console.log("HERE")
+		$('.parallax').parallax();
+    console.log("HERE");
 
 });

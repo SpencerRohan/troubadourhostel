@@ -1,5 +1,5 @@
 <!-- pagination -->
 <div class="pagination">
-	<?php html5wp_pagination(); ?>
+	<?php get_the_posts_pagination(); ?>
 </div>
 <!-- /pagination -->

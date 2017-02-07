@@ -13,7 +13,7 @@
  */
 try {
     require get_template_directory() . '/vendor/autoload.php';
-    $bones_theme = new Site;
+    $trhostel = new Site;
 } catch(\Exception $e) {
     if(defined('WP_DEBUG') && WP_DEBUG) {
         echo $e->getMessage();
