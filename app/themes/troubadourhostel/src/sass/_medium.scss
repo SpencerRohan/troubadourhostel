@@ -1,4 +1,9 @@
 @include media(">=md") {
+
+	.home header {
+		.brand-title { padding-top: 20vh; }
+	}
+
 	h1.brand-troubadour {
 	  font-size: 8rem;
 	}
