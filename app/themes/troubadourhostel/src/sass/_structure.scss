@@ -1,0 +1,48 @@
+html, body { 
+	background-color: $brand-c-backing;
+  color: $brand-c-text;
+}
+
+*:focus {
+  outline:none;
+}
+
+/* Fonts */
+.brand-primary { font-family:  $brand-f-primary;}
+.brand-signature { font-family:  $brand-f-signature;}
+
+/* Lists */
+ul li { list-style: none; }
+a, a:hover, a:focus, a:active { 
+  color: $brand-c-link;
+  text-decoration: none; 
+}
+
+/* Parallax */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.parallax {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.parallax img {
+    bottom: 0;
+    display: none;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

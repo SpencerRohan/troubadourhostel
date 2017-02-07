@@ -16,23 +16,24 @@ var gulp      = require('gulp'),
     // },
     sass: {
       base: 'src/sass',
-      app: 'src/sass/app.scss',
+      app:  'src/sass/app.scss',
     },
     js: {
       base: 'src/js',
       dist: 'src/js'
     },
     vendor: {
-    	base: 'src/vendor',
-   		// materialize: 'src/vendor/Materialize',
-      bootstrap: 'src/vendor/bootstrap',
-      tether: 'src/vendor/tether',
-   		jquery: 'src/vendor/jquery'
+    	base:        'src/vendor',
+   		materialize: 'src/vendor/Materialize',
+      bootstrap:   'src/vendor/bootstrap',
+      tether:      'src/vendor/tether',
+   		jquery:      'src/vendor/jquery',
+      parallax:    'src/vendor/parallax',
    	}
   },
   dest = { 
     css: 'assets/css',
-    js: 'assets/js'
+    js:  'assets/js'
   };
 
 /**
@@ -54,23 +55,15 @@ gulp.task('js', function() {
   compileJS(
     'app.js', 
     [
-  		src.vendor.jquery+'/dist/jquery.js',
-      src.vendor.tether+'/dist/js/tether.min.js',
-      // src.vendor.materialize+'/dist/js/materialize.js',
-      src.vendor.bootstrap+'/dist/js/bootstrap.min.js',
-      src.js.base+'/parallax.js',
-      src.js.base+'/app.js',
+  		src.vendor.jquery + '/dist/jquery.js',
+      src.vendor.tether + '/dist/js/tether.min.js',
+      // src.vendor.materialize + '/dist/js/materialize.js',
+      src.vendor.bootstrap + '/dist/js/bootstrap.min.js',
+      src.vendor.parallax + '/parallax.js',
+      src.js.base + '/app.js',
     ], 
     dest.js
   );
-
-  // compileJS(
-  //   'admin.js', 
-  //   [
-  //     src.js.base+'admin.js',
-  //   ], 
-  //   dest.js
-  // );
 });
 
 gulp.task('watch', function() {

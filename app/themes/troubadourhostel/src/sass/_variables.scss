@@ -1,4 +1,24 @@
+/* COLORS */
+$brand-c-primary: #FDCB15; 
+$brand-crgb-primary: rgba(253,203,21,1);
+$brand-c-secondary: #B53D3B;
+$brand-crgb-secondary: rgba(181, 61, 59, 1);
+$brand-c-backing: #FCF2D7; 
+$brand-crgb-backing: rgba(252, 242, 215, 1);
+$brand-c-text: #272A33; 
+$brand-crgb-text: rgba(39,42,51,1);
+$brand-c-link: #B53D3B; 
+$brand-crgb-link: rgba(181, 61, 59, 1);
+$brand-c-link: #FDCB15; 
+$brand-crgb-primary: rgba(253,203,21,1);
 
+
+/* Overriding Bootstrap */
+$brand-primary: $brand-c-primary;
+
+/* FONTS */
+$brand-f-primary: "SignPainter";
+$brand-f-signature:  "SignPainter";
 
 // include-media into bootstrap
 $breakpoints: $grid-breakpoints;

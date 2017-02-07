@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-
+SEARCH!!
 <?php get_header(); ?>
 
 	<main role="main">
@@ -19,9 +19,9 @@
 
 			<h1><?php echo sprintf( __( '%s Search Results for ', 'troubadourhostel' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
-			<?php get_template_part('loop'); ?>
+			<?php get_template_part('template-parts/loop'); ?>
 
-			<?php get_template_part('pagination'); ?>
+			<?php get_template_part('template-parts/pagination'); ?>
 
 		</section>
 		<!-- /section -->

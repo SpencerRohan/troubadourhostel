@@ -15,18 +15,17 @@
  * @version 1.0
  */
 ?>
-
+INDEX!!
 <?php get_header(); ?>
-
 	<main role="main">
 		<!-- section -->
 		<section>
 
 			<h1><?php _e( 'Latest Posts', 'troubadourhostel' ); ?></h1>
 
-			<?php get_template_part('loop'); ?>
+			<?php get_template_part('template-parts/loop'); ?>
 
-			<?php get_template_part('pagination'); ?>
+			<?php get_template_part('template-parts/pagination'); ?>
 
 		</section>
 		<!-- /section -->
