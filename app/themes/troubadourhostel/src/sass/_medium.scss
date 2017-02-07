@@ -1,4 +1,13 @@
 @include media(">=md") {
+	h1.brand-troubadour {
+	  font-size: 8rem;
+	}
+
+	h1.brand-hostel {
+		font-size: 2.5rem;
+		margin-left: 300px;
+		margin-top: -32px;
+	}
 
 }
 

@@ -1,0 +1,32 @@
+nav {
+	background-color: rgba(39,42,51,1);
+	height: 50px; 
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	font-family: $brand-f-signature;
+	font-size: 24px;
+	text-transform: lowercase;
+	ul { 
+		align-items: center;
+		display: flex; 
+		flex-direction: column;
+		flex-wrap: wrap;
+		padding: 0;
+		margin-top: 10px;
+
+		li { display: inline-block; }
+	}
+}
+
+@include media(">=md") {
+	nav {
+		height: 100%;
+		background-color: rgba(39,42,51,.3);
+		&:hover { background-color: rgba(39,42,51,1); }
+		ul {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	} 
+}

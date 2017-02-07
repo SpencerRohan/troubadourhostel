@@ -1,8 +1,4 @@
 .home header { 
-/*	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/68/5a/52/685a52208670ded7de194baffbad9abe.jpg);
-	background-image: url(http://www.chicagoeb5.com/wp-content/uploads/2013/11/chicago_skyline_hd_wallpaper-HD-bw.jpg);
-	background-image: url(https://puu.sh/tPZHj/76428d6640.png);
-	background-image: url(http://d2436y6oj07al2.cloudfront.net/assets/vbblog/2015/02/River.jpg); */
 	background-color: $brand-c-backing;
 	height: 100vh;
 
@@ -11,22 +7,38 @@
 	}
 
 	.brand-title {
-		padding-top: 20vh;
-		flex-direction: row;
-		justify-content: center;
 		align-items: center;
 		display:flex;
+		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 20vh;
 
 		.title {
 			text-align: center;
+			h1.brand-troubadour {
+				font-family: $brand-f-signature;
+				color: black;
+			  margin-bottom: 0;
+			  text-shadow: -1px -1px 0 #ffdc31, 1px -1px 0 #ffdc31, -1px 1px 0 #ffdc31, 1px 1px 0 #ffdc31;-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			  -webkit-text-stroke-color: #ffdc31;
+			}
+
+			h1.brand-hostel {
+			  color: white;
+			  font-size: 1.4rem;
+    		margin-left: 65px;
+			  margin-top: -10px;
+			  text-shadow: -1px -1px 0 #0c0c0c, 1px -1px 0 #060606, -1px 1px 0 #0e0e0e, 1px 1px 0 #080808;
+			  -webkit-text-stroke-color: #ffdc31;
+			}
 		}
 		
 		.logo {
 			display: inline-block;
 			#tr-window {
-				width: 60px;
 				margin-left: 40px;
+				width: 60px;
 			} 
 		}
 
@@ -34,9 +46,13 @@
 			clear: both;
 			flex: 0 1 100%;
 			text-align: center;
+			h4 {
+				color: $brand-c-primary;
+				text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	    	-webkit-text-stroke-color: black;
+			}
 		}
 	}
-
 }
 
 
