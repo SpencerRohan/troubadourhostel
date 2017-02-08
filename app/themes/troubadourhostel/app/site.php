@@ -64,15 +64,16 @@ class Site
 	{
 		register_post_type( 'tr_overview',
 	  	array(
-	  		'description' => 'Front-Page sections',
-	      'labels' => array( 
-	      	'name' => __( 'Overviews' ), 
+	  		'description' 	=> 'Front-Page sections',
+	      'labels' 				=> array( 
+	      	'name' 					=> __( 'Overviews' ), 
 	      	'singular_name' => __( 'Overview' )
 	      ),
-	    	'has_archive' => false,
+	    	'has_archive' 	=> false,
+	    	'menu_icon' 		=> 'dashicons-exerpt-view',
 	    	'menu_position' => 20,
-	    	'public' => true,
-	    	'supports' => array( 'title', 'editor', 'custom-fields' )
+	    	'public' 				=> true,
+	    	'supports' 			=> array( 'title', 'editor', 'custom-fields' ),
 
 	    )
 	  );
