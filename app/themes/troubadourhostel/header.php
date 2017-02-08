@@ -35,7 +35,7 @@
 				<header class="header clear <?php echo is_home() ? 'parallax-container' : ''; ?>">
 						<!-- nav -->
 						<nav class="nav" role="navigation">
-							<?php wp_nav_menu( array( 'troubadourhostel' => 'primary' ) ); ?>
+							<?php wp_nav_menu( array( 'Primary Menu' ) ); ?>
 						</nav>
 
 

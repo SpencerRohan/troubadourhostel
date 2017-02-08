@@ -38,8 +38,7 @@ class Site
       'wp_enqueue_scripts'      	=> array('site_enqueue_scripts_and_styles'),
       'widgets_init'            	=> array('register_sidebars'),
       'admin_enqueue_scripts'   	=> array('admin_enqueue_styles', 'admin_enqueue_scripts'),
-      'after_setup_theme'       	=> array('register_menus'),
-      'after_setup_theme'					=> array('custom_theme_support'),
+      'after_setup_theme'					=> array('register_menus', 'custom_theme_support'),
       'wp_head'										=> array('add_meta_tags')
 		);
 
