@@ -1,4 +1,4 @@
-<?php
+<?php namespace Troubadour;
 /**
  * The main template file
  *
@@ -19,17 +19,59 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<!-- section -->
-		<section>
+		<!-- section1 -->
 
-			<h1><?php _e( 'Latest Posts', 'troubadourhostel' ); ?></h1>
+		<?php $sec1 = $trhostel->get_custom_post_by_title('About', "tr_overview"); ?>
+		<?php if(isset($sec1)): ?>
+			<section class="container section1 <?php echo $sec1->post_title; ?>">
+					<div class="row">
+						<div class="col-lg-12">
+							This is section 1: <?php echo $sec1->post_title; ?>
+						</div>
+					</div>
+			</section>
+		<?php endif; ?>
+		<!-- /section` -->
 
-			<?php get_template_part('template-parts/loop'); ?>
+		<!-- section2 -->
+		<?php $sec2 = $trhostel->get_custom_post_by_title('Partnership', "tr_overview"); ?>
+		<?php if(isset($sec2)): ?>
+			<section class="container section2 <?php echo $sec2->post_title; ?>">
+				<div class="row">
+					<div class="col-lg-12">
+						This is section 2: <?php echo $sec2->post_title; ?>
+					</div>
+				</div>
+			</section>
+		<?php endif; ?>
+		<!-- /section2 -->
 
-			<?php get_template_part('template-parts/pagination'); ?>
+		<!-- section3 -->
+		<?php $sec3 = $trhostel->get_custom_post_by_title('Residence', "tr_overview"); ?>
+		<?php if(isset($sec3)): ?>
+			<section class="container section3 <?php echo $sec3->post_title; ?>">
+				<div class="row">
+					<div class="col-lg-12">
+						This is section 3: <?php echo $sec3->post_title; ?>
+					</div>
+				</div>
+			</section>
+		<?php endif; ?>
+		<!-- /section3 -->
 
-		</section>
-		<!-- /section -->
+		<!-- section4 -->
+		<?php $sec4 = $trhostel->get_custom_post_by_title('Brouchure', "tr_overview"); ?>
+		<?php if(isset($sec4)): ?>
+			<section class="container section4 <?php echo $sec4->post_title; ?>">
+				<div class="row">
+					<div class="col-lg-12">
+						This is section 4: <?php echo $sec4->post_title; ?>
+					</div>
+				</div>
+			</section>
+		<?php endif; ?>
+		<!-- /section4 -->
+
 	</main>
 
 <?php get_sidebar(); ?>
