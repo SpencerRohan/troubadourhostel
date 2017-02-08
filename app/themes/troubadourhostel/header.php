@@ -55,7 +55,10 @@
 								<div class="slogan">
 									<h4 class="brand-slogan">CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
 								</div>
-								<a href ="#!" class="scroll-icon"></a>
+								<div class="scroll-container">
+									<span class="scroll-text">SCROLL DOWN</span>
+									<span class="scroll-icon"></span>
+								</div>
 							</div>
 
 						<?php endif; ?>

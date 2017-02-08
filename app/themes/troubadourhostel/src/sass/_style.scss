@@ -1,6 +1,8 @@
+html { height: 10000px; } // Delete later!
 .home header { 
 	background-color: $brand-c-backing;
 	height: 100vh;
+	min-height:360px;
 
 	.parallax img {
 		height: 140vh;
@@ -21,8 +23,8 @@
 		.logo {
 			display: inline-block;
 			#tr-window {
-				margin-left: 40px;
-				width: 60px;
+				margin-left: 15px;
+				width: 45px;
 			} 
 		}
 
@@ -34,16 +36,34 @@
 	}
 }
 
-a.scroll-icon {
-	font-family: 'icomoon';
-	font-color: black;
-	color: #ffdc31;
-	font-size: 45px;
+.scroll-container {
+	bottom: 20px;
 	position: absolute;
-	bottom: 40px;
-	text-shadow: -1px -1px 0 #060606, 1px -1px 0 #21211f, -1px 1px 0 #0c0c0a, 1px 1px 0 #272622;
-	-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
-	-webkit-text-stroke-color: #080807;
+	text-align:center;
+	&:hover .scroll-text{ 
+		opacity: 1; 
+		transform: translateY(0px); 
+	}
+	.scroll-text {
+		color: white; 
+    display: block;
+    font-size: 14px;
+		margin: 0; 
+    opacity: 0;
+		padding: 0; 
+		transform: translateY(-10px);
+    transition: all .3s;
+
+	}
+	.scroll-icon {
+		color: #ffdc31;
+		cursor: pointer;
+		font-color: black;
+		font-family: 'icomoon';
+		font-size: 40px;
+		text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		-webkit-text-stroke-color: #080807;
+	}
 }
 
 h1.brand-troubadour {
