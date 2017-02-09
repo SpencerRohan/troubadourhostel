@@ -39,7 +39,9 @@ html { height: 10000px; } // Delete later!
 .scroll-container {
 	bottom: 20px;
 	position: absolute;
+	right: 0;
 	text-align:center;
+	width: 100%;
 	&:hover .scroll-text{ 
 		opacity: 1; 
 		transform: translateY(0px); 
@@ -96,3 +98,5 @@ h4.brand-slogan{
 		fill: $brand-c-primary;
 	}
 }
+
+main { -webkit-transform: translate3d(0,0,0); }
