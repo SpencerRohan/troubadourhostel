@@ -26,7 +26,7 @@
 			<section class="container section1 <?php echo $sec1->post_title; ?>">
 					<div class="row">
 						<div class="col-lg-12">
-							This is section 1: <?php echo $sec1->post_title; ?>
+							<h1><?php echo $sec1->post_title; ?></h1>
 						</div>
 					</div>
 			</section>
@@ -39,7 +39,7 @@
 			<section class="container section2 <?php echo $sec2->post_title; ?>">
 				<div class="row">
 					<div class="col-lg-12">
-						This is section 2: <?php echo $sec2->post_title; ?>
+						<h1><?php echo $sec2->post_title; ?></h1>
 					</div>
 				</div>
 			</section>
@@ -52,7 +52,7 @@
 			<section class="container section3 <?php echo $sec3->post_title; ?>">
 				<div class="row">
 					<div class="col-lg-12">
-						This is section 3: <?php echo $sec3->post_title; ?>
+						<h1><?php echo $sec3->post_title; ?></h1>
 					</div>
 				</div>
 			</section>
@@ -65,7 +65,7 @@
 			<section class="container section4 <?php echo $sec4->post_title; ?>">
 				<div class="row">
 					<div class="col-lg-12">
-						This is section 4: <?php echo $sec4->post_title; ?>
+						<h1><?php echo $sec4->post_title; ?></h1>
 					</div>
 				</div>
 			</section>
@@ -73,7 +73,5 @@
 		<!-- /section4 -->
 
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
