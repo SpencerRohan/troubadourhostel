@@ -22,11 +22,33 @@
 		<!-- section1 -->
 
 		<?php $sec1 = $trhostel->get_custom_post_by_title('About', "tr_overview"); ?>
+		<?php $sec2 = $trhostel->get_custom_post_by_title('Partnership', "tr_overview"); ?>
+		<?php $sec3 = $trhostel->get_custom_post_by_title('Residence', "tr_overview"); ?>
+		<?php $sec4 = $trhostel->get_custom_post_by_title('Brouchure', "tr_overview"); ?>
+
+
+
 		<?php if(isset($sec1)): ?>
 			<section class="container section1 <?php echo $sec1->post_title; ?>">
 					<div class="row">
 						<div class="col-lg-12">
 							<h1><?php echo $sec1->post_title; ?></h1>
+
+							<div class="col-lg-4 featured-item">
+	              <span class="featured-icon">T</span>
+	              <h5><?php echo $sec2->post_title; ?></h5>
+	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	            </div>
+	            <div class="col-lg-4 featured-item">
+	              <span class="featured-icon">T</span>
+	              <h5><?php echo $sec3->post_title; ?></h5>
+	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	            </div>
+	            <div class="col-lg-4 featured-item">
+	              <span class="featured-icon">T</span>
+	              <h5><?php echo $sec4->post_title; ?></h5>
+	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	            </div>
 						</div>
 					</div>
 			</section>
@@ -34,7 +56,6 @@
 		<!-- /section` -->
 
 		<!-- section2 -->
-		<?php $sec2 = $trhostel->get_custom_post_by_title('Partnership', "tr_overview"); ?>
 		<?php if(isset($sec2)): ?>
 			<section class="container section2 <?php echo $sec2->post_title; ?>">
 				<div class="row">
@@ -47,7 +68,6 @@
 		<!-- /section2 -->
 
 		<!-- section3 -->
-		<?php $sec3 = $trhostel->get_custom_post_by_title('Residence', "tr_overview"); ?>
 		<?php if(isset($sec3)): ?>
 			<section class="container section3 <?php echo $sec3->post_title; ?>">
 				<div class="row">
@@ -60,7 +80,6 @@
 		<!-- /section3 -->
 
 		<!-- section4 -->
-		<?php $sec4 = $trhostel->get_custom_post_by_title('Brouchure', "tr_overview"); ?>
 		<?php if(isset($sec4)): ?>
 			<section class="container section4 <?php echo $sec4->post_title; ?>">
 				<div class="row">
