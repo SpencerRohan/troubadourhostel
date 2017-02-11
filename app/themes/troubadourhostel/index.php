@@ -15,7 +15,6 @@
  * @version 1.0
  */
 ?>
-INDEX!!
 <?php get_header(); ?>
 	<main role="main">
 		<!-- section -->
