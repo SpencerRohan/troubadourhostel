@@ -38,16 +38,20 @@
 	              <span class="featured-icon">T</span>
 	              <h5><?php echo $sec2->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	             	<a href="#!">CHECK IT OUT!</a>
+
 	            </div>
 	            <div class="col-lg-4 featured-item">
 	              <span class="featured-icon">T</span>
 	              <h5><?php echo $sec3->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	              <a href="#!">CHECK IT OUT!</a>
 	            </div>
 	            <div class="col-lg-4 featured-item">
 	              <span class="featured-icon">T</span>
 	              <h5><?php echo $sec4->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+	              <a href="#!">CHECK IT OUT!</a>
 	            </div>
 						</div>
 					</div>
