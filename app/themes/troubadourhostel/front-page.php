@@ -33,6 +33,9 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<h1><?php echo $sec1->post_title; ?></h1>
+							<p>​Troubadour Hostel seeks to provide a home away from home for the global artistic community by fostering creativity, promoting collaboration and advocating a free-thinking space.</p>
+							<p>We facilitate a safe space for creative minds to converge, building lasting connections by fusing cultures and artistic disciplines.</p>
+							<p>We strive to be a cultural keystone for our home community by listening to the needs of the neighborhood, the youth and local artists. </p>
 
 							<div class="col-lg-4 featured-item">
 	              <span class="featured-icon">T</span>
