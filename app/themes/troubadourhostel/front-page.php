@@ -38,20 +38,20 @@
 							<p>We strive to be a cultural keystone for our home community by listening to the needs of the neighborhood, the youth and local artists. </p>
 
 							<div class="col-lg-4 featured-item">
-	              <span class="featured-icon">T</span>
+	              <span class="featured-icon icomoon"></span>
 	              <h5><?php echo $sec2->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
 	             	<a href="#!">CHECK IT OUT!</a>
 
 	            </div>
 	            <div class="col-lg-4 featured-item">
-	              <span class="featured-icon">T</span>
+	              <span class="featured-icon icomoon"></span>
 	              <h5><?php echo $sec3->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
 	              <a href="#!">CHECK IT OUT!</a>
 	            </div>
 	            <div class="col-lg-4 featured-item">
-	              <span class="featured-icon">T</span>
+	              <span class="featured-icon icomoon"></span>
 	              <h5><?php echo $sec4->post_title; ?></h5>
 	              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
 	              <a href="#!">CHECK IT OUT!</a>
