@@ -2,6 +2,15 @@
 
 	.home header {
 		.brand-title { padding-top: 20vh; }
+
+		.brand-title {
+			.logo {
+				#tr-window {
+					margin-left: 40px;
+					width: 60px;
+				} 
+			}
+		} 
 	}
 
 	h1.brand-troubadour {

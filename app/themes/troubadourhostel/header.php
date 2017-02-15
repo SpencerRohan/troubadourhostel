@@ -31,16 +31,15 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+				<!-- nav -->
+				<nav class="nav" role="navigation">
+					<?php wp_nav_menu( array( 'Primary Menu' ) ); ?>
+				</nav>
+
+
+				<!-- /nav -->
 				<!-- header -->
 				<header class="header clear <?php echo is_home() ? 'parallax-container' : ''; ?>">
-						<!-- nav -->
-						<nav class="nav" role="navigation">
-							<?php wp_nav_menu( array( 'troubadourhostel' => 'primary' ) ); ?>
-						</nav>
-
-
-						<!-- /nav -->
-
 						<?php if( is_home() ): ?>
 							<div class="parallax"><img src="http://d2436y6oj07al2.cloudfront.net/assets/vbblog/2015/02/River.jpg"></div>
 
@@ -55,7 +54,10 @@
 								<div class="slogan">
 									<h4 class="brand-slogan">CHICAGO'S PREMIERE ARTIST HOSTEL</h4>
 								</div>
-								<a href ="#!" class="scroll-icon"></a>
+								<div class="scroll-container">
+									<span class="scroll-text">SCROLL DOWN</span>
+									<span class="scroll-icon"></span>
+								</div>
 							</div>
 
 						<?php endif; ?>

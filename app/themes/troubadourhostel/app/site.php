@@ -5,10 +5,9 @@ class Site
 
 	public function __construct() 
 	{
-		// $this->setup_filters();
+		$this->setup_filters();
 		$this->add_actions();
 		$this->setup_theme();
-		$this->add_admin_actions();
 	}
 
 	private function setup_theme(){
@@ -18,8 +17,9 @@ class Site
 
 	}
 	private function setup_filters(){
-		add_filter( 'script_loader_src', array($this, 'wpse47206_src'));
-		add_filter( 'style_loader_src', array($this, 'wpse47206_src'));
+		// add_filter( 'script_loader_src', array($this, 'wpse47206_src'));
+		// add_filter( 'style_loader_src', array($this, 'wpse47206_src'));
+
 	}
 
 
@@ -29,32 +29,17 @@ class Site
 	    return str_replace( site_url(), '', $url );
 	}
 
-	private function add_admin_actions()
-	{
-		$actions = array(
-      'widgets_init'            => array('register_sidebars'),
-      'admin_enqueue_scripts'   => array('admin_enqueue_styles', 'admin_enqueue_scripts'),
-      'after_setup_theme'       => array('register_menus'),
-      'after_setup_theme'				=> array('custom_theme_support'),
-      'wp_head'									=> array('add_meta_tags')
-		);
-
-		foreach ($actions as $action=>$functions) 
-		{
-			foreach ($functions as $function)
-			{
-				add_action( $action , array( $this, $function ));
-			}
-		}
-	}
-
 	private function add_actions()
 	{
 		$actions = array(
-			'init'										=> array('site_register_styles'),
-			'get_svg'									=> array('get_svg'),
-      'login_enqueue_scripts'   => array('login_enqueue_styles'),
-      'wp_enqueue_scripts'      => array('site_enqueue_scripts_and_styles')
+			'init'											=> array('site_register_styles', 'add_custom_post_types'),
+			'get_svg'										=> array('get_svg'),
+      'login_enqueue_scripts'   	=> array('login_enqueue_styles'),
+      'wp_enqueue_scripts'      	=> array('site_enqueue_scripts_and_styles'),
+      'widgets_init'            	=> array('register_sidebars'),
+      'admin_enqueue_scripts'   	=> array('admin_enqueue_styles', 'admin_enqueue_scripts'),
+      'after_setup_theme'					=> array('register_menus', 'custom_theme_support'),
+      'wp_head'										=> array('add_meta_tags')
 		);
 
 		foreach ($actions as $action=>$functions) 
@@ -64,11 +49,33 @@ class Site
 				add_action( $action , array( $this, $function ));
 			}
 		}
+
+		// add_action( 'get_custom_post_by_title', array( $this, 'get_custom_post_by_title'), 10, 3 );
 	}
 
-	public function site_register_styles(){
+	public function site_register_styles()
+	{
 		wp_register_style('app-css', get_template_directory_uri () . '/assets/css/app.css');
 
+	}
+
+	public function add_custom_post_types()
+	{
+		register_post_type( 'tr_overview',
+	  	array(
+	  		'description' 	=> 'Front-Page sections',
+	      'labels' 				=> array( 
+	      	'name' 					=> __( 'Overviews' ), 
+	      	'singular_name' => __( 'Overview' )
+	      ),
+	    	'has_archive' 	=> false,
+	    	'menu_icon' 		=> 'dashicons-exerpt-view',
+	    	'menu_position' => 20,
+	    	'public' 				=> true,
+	    	'supports' 			=> array( 'title', 'editor', 'custom-fields' ),
+
+	    )
+	  );
 	}
 
 	public function login_enqueue_styles()
@@ -140,6 +147,13 @@ class Site
 	public function get_svg($filename)
 	{
 		get_template_part('assets/svg/'.$filename);
+	}
+
+	public function get_custom_post_by_title($page_title, $post_type='post', $output = OBJECT) {
+    global $wpdb;
+    $post = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $page_title, $post_type));
+
+    return get_post($post, $output);
 	}
 
 	public function add_meta_tags()
