@@ -1,6 +1,8 @@
+html { height: 10000px; } // Delete later!
 .home header { 
 	background-color: $brand-c-backing;
 	height: 100vh;
+	min-height:360px;
 
 	.parallax img {
 		height: 140vh;
@@ -21,8 +23,8 @@
 		.logo {
 			display: inline-block;
 			#tr-window {
-				margin-left: 40px;
-				width: 60px;
+				margin-left: 15px;
+				width: 45px;
 			} 
 		}
 
@@ -34,16 +36,36 @@
 	}
 }
 
-a.scroll-icon {
-	font-family: 'icomoon';
-	font-color: black;
-	color: #ffdc31;
-	font-size: 45px;
+.scroll-container {
+	bottom: 20px;
 	position: absolute;
-	bottom: 40px;
-	text-shadow: -1px -1px 0 #060606, 1px -1px 0 #21211f, -1px 1px 0 #0c0c0a, 1px 1px 0 #272622;
-	-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
-	-webkit-text-stroke-color: #080807;
+	right: 0;
+	text-align:center;
+	width: 100%;
+	&:hover .scroll-text{ 
+		opacity: 1; 
+		transform: translateY(0px); 
+	}
+	.scroll-text {
+		color: white; 
+    display: block;
+    font-size: 14px;
+		margin: 0; 
+    opacity: 0;
+		padding: 0; 
+		transform: translateY(-10px);
+    transition: all .3s;
+
+	}
+	.scroll-icon {
+		color: #ffdc31;
+		cursor: pointer;
+		font-color: black;
+		font-family: 'icomoon';
+		font-size: 40px;
+		text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		-webkit-text-stroke-color: #080807;
+	}
 }
 
 h1.brand-troubadour {
@@ -76,3 +98,33 @@ h4.brand-slogan{
 		fill: $brand-c-primary;
 	}
 }
+
+.featured-item {
+	text-align: center;
+}
+
+.featured-icon {
+  background: #fff;
+  border: 1px solid #f8f8f8;
+  border-radius: 100px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  color: #777;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 45px;
+  height: 110px;
+  line-height: 110px;
+  margin: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 110px;
+	&:hover {
+		-webkit-transform: translateY(-10px);
+	  -ms-transform: translateY(-10px);
+	  transform: translateY(-10px);
+	  box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+	}
+}
+
+
+main { -webkit-transform: translate3d(0,0,0); }
